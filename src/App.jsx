@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import quizData from './data/data'
+import Landing from './pages/Landing';
+import Questions from './pages/Questions';
 
 function App() {
   const [category, setCategory]= useState("Coding")
@@ -10,16 +12,15 @@ function App() {
   // console.log(data);
 
   const quizques= quizData.find(item => item.category === category).questions
-  console.log(quizques);
+  // console.log(quizques);
   
   
 
   return (
-    
-      <div className='bg-black text-white h-screen'>
-
-      </div>
-   
+    <>
+      <Landing setCategory={setCategory}/>
+      <Questions category={category}/>
+    </>
   )
 }
 
