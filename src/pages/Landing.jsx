@@ -1,12 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Landing = ({setCategory}) => {
+const Landing = ({ setCategory }) => {
     const categories = ["Science", "Mathematics", "History", "Geography", "Coding"]
 
     const handleCategory = (e) => {
-        console.log(e);
-        
         setCategory(e.target.innerText)
     }
 
@@ -19,11 +17,10 @@ const Landing = ({setCategory}) => {
                     <button onClick={handleCategory}>{category}</button>
                 </div>
             ))}
-            <button>Start quiz</button>
-            
-            {/* link to questions url */}
-            {/* <Link to="/questions">
-            </Link> */}
+
+            <Link to="/questions">
+                <button>Start quiz</button>
+            </Link>
         </div>
     )
 }
