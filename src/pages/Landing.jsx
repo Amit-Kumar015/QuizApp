@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { VortexDemoSecond } from '../components/AceternityUI/vortexEffect/vortexComponent'
 
 const Landing = ({ setCategory }) => {
     const categories = ["Science", "Mathematics", "History", "Geography", "Coding"]
@@ -10,7 +11,8 @@ const Landing = ({ setCategory }) => {
 
     return (
         <div className='h-screen w-screen flex flex-col justify-center items-center'>
-            <div className='justify-center items-center'>
+            <VortexDemoSecond></VortexDemoSecond>
+            <div className='justify-center items-center z-20'>
                 <div className='text-center text-5xl font-bold mb-8 [@media(max-width:430px)]:text-3xl'>Basic Quiz</div>
                 <p className='text-center text-2xl mb-3 [@media(max-width:430px)]:text-xl'>Select one of the categories</p>
                 <div className='text-center'>
@@ -29,6 +31,7 @@ const Landing = ({ setCategory }) => {
                     </div>
                 </div>
             </div>
+        
         </div>
     )
 }

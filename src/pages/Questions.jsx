@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import quizData from '../data/data'
+import { VortexDemoSecond } from '../components/AceternityUI/vortexEffect/vortexComponent'
 
 const Questions = ({ category, points, setPoints }) => {
 
@@ -44,7 +45,8 @@ const Questions = ({ category, points, setPoints }) => {
 
     return (
         <div className='w-screen h-screen flex flex-col justify-center items-center'>
-            <div className='justify-center items-center'>
+            <VortexDemoSecond></VortexDemoSecond>
+            <div className='justify-center items-center z-20'>
                 <div className='text-center text-3xl mb-4 mt-20 px-10 font-semibold font-mono [@media(max-width:430px)]:text-lg'>{quizques[index].ques}</div>
                 <div className='text-lg text-center'>Question: {index + 1}/10</div>
                 <div className='flex flex-col w-screen'>
