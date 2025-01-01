@@ -9,18 +9,26 @@ const Landing = ({ setCategory }) => {
     }
 
     return (
-        <div>
-            <div>Basics Quiz</div>
-            <p>select one of the categories</p>
-            {categories.map((category) => (
-                <div key={category}>
-                    <button onClick={handleCategory}>{category}</button>
+        <div className='h-screen w-screen flex flex-col justify-center items-center'>
+            <div className='justify-center items-center'>
+                <div className='text-center text-5xl font-bold mb-8 [@media(max-width:430px)]:text-3xl'>Basic Quiz</div>
+                <p className='text-center text-2xl mb-3 [@media(max-width:430px)]:text-xl'>Select one of the categories</p>
+                <div className='text-center'>
+                    {categories.map((category) => (
+                        <span key={category}>
+                            <button className="m-2" onClick={handleCategory}>{category}</button>
+                        </span>
+                    ))}
                 </div>
-            ))}
 
-            <Link to="/questions">
-                <button>Start quiz</button>
-            </Link>
+                <div className='flex justify-center items-center mt-7'>
+                    <div className='justify-center items-center'>
+                        <Link to="/questions">
+                            <button className='w-40 text-xl'>Start</button>
+                        </Link>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
